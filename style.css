@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Ubuntu', sans-serif;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #333;
+}
+.navigation
+{
+	position: relative;
+}
+.navigation ul
+{
+	display: flex;
+}
+.navigation ul li
+{
+	position: relative;
+	list-style: none;
+	width: 100px;
+	height: 100px;
+	z-index: 1;
+}
+.navigation ul li a
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: #fff;
+	text-align: center;
+
+}
+.navigation ul li a .icon
+{
+	position: relative;
+	line-height: 100px;
+	transition: 0.25s;
+	font-size: 40px;
+}
+.navigation ul li.active a .icon 
+{
+	font-size: 25px;
+	transform: translateY(-10px);
+}
+.navigation ul li a .text
+{
+	position: absolute;
+	font-size: 18px;
+	color: #fff;
+	bottom: 20px;
+	font-weight: 400;
+	transition: 0.5s;
+	text-transform: uppercase;
+	transform: scale(0);
+}
+.navigation ul li.active a .text
+{
+	transform: scale(1);
+}
+.indicator
+{
+	position: absolute;
+	left: 1;
+	width: 100px;
+	height: 100px;
+	border-radius: 20px;
+	transition: 0.5s;
+}
+.navigation ul li:nth-child(1).active ~ .indicator
+{
+	background: #ff8597;
+	box-shadow: 0 15px 25px #ff859799;
+	transform: translateX(calc(100px * 0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator
+{
+	background: #0fbcf9;
+	box-shadow: 0 15px 25px #0fbcf999;
+	transform: translateX(calc(100px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator
+{
+	background: #a94df5;
+	box-shadow: 0 15px 25px #a94df599;
+	transform: translateX(calc(100px * 2));
+}
