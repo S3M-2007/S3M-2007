@@ -8,11 +8,14 @@
 }
 body
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: #333;
+	background: url(keyboard2.jpg);
+	backdrop-filter: blur(5px);
+    	background-size: cover;
+    	background-position: center;
+    	min-height: 100vh;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
 }
 .navigation
 {
